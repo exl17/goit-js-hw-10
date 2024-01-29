@@ -106,3 +106,124 @@ ul {
   border: 1px solid #4E75FF;
 
 }
+
+/* 2-snackbar */
+
+.form {
+  padding-left: 156px;
+  padding-top: 68px;
+  
+}
+.notification-btn {
+  display: flex;
+    width: 360px;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+      background: #4E75FF;
+      border: 0;
+      color: #FFF;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0.64px;
+        margin-top: 24px;
+}
+
+.delay-input {
+  width: 346px;
+    height: 40px;
+    border-radius: 4px;
+      border: 1px solid #808080;
+      margin-bottom: 30px;
+      outline: none;
+      padding-left: 14px;
+}
+
+.delay-label {
+  display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    color: #2E2F42;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0.64px;
+         
+    
+}
+
+.fieldset-state {
+  width: 360px;
+    height: 64px;
+    border-radius: 4px;
+      border: 1px solid #808080;
+      padding: 0;
+      margin: 0;
+      display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.legend {
+  margin-left: 28px;
+  color: #2E2F42;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.64px;
+    
+}
+
+.radio-btn {
+  color: #2E2F42;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    padding-right: 24px;
+    display: inline-flex;
+      
+}
+
+.input-radio {
+width: 19px;
+  height: 19px;
+  padding-left: 24px;
+  margin-right: 14px;
+}
+
+.notification-btn:hover {
+border-radius: 8px;
+  background: #6C8CFF;
+}
+
+.delay-input:hover {
+border-radius: 4px;
+  border: 1px solid #000;
+}
+
+.delay-input:focus {
+  border-radius: 4px;
+    border: 1px solid #4E75FF;
+}
+
+.fieldset-state:focus {
+border-radius: 4px;
+  border: 1px solid #000;
+}
+
+.fieldset-state:hover {
+  border-radius: 4px;
+  border: 1px solid #000;
+}
