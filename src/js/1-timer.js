@@ -3,13 +3,12 @@ import "flatpickr/dist/flatpickr.min.css";
 import iziToast from "izitoast/dist/js/iziToast";
 import "izitoast/dist/css/iziToast.min.css";
 
-
 const options = {
   enableTime: true,
   time_24hr: true,
   defaultDate: new Date(),
   minuteIncrement: 1,
-  onClose(selectedDates) {
+  onClose(selectedDates, dateStr, instance) {
     const selectedDate = selectedDates[0];
     const currentDate = new Date();
 
@@ -19,14 +18,19 @@ const options = {
         message: "Please choose a date in the future",
       });
 
-      
       document.querySelector('[data-start]').disabled = true;
     } else {
       document.querySelector('[data-start]').disabled = false;
+
+      targetDate = selectedDate;
+      
+      if (!countdownInterval) {
+        updateTimer();
+        countdownInterval = setInterval(updateTimer, 1000);
+      }
     }
   },
 };
-
 
 flatpickr("#datetime-picker", options);
 
@@ -72,9 +76,11 @@ function updateInterface({ days, hours, minutes, seconds }) {
   document.querySelector('[data-seconds]').textContent = addLeadingZero(seconds);
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector('[data-start]').disabled = true;
+});
 
 document.querySelector('[data-start]').addEventListener('click', () => {
-
   document.querySelector('[data-start]').disabled = true;
 
   const selectedDate = flatpickr("#datetime-picker").selectedDates[0];
